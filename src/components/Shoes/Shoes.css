@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clothsContainer {
+  /* border: 1px solid; */
+  display: grid;
+  width: 90%;
+  margin: 20px auto;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  font-family: sans-serif;
+}
+.cart {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 7px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  line-height: 20px;
+}
+.imgDiv {
+  width: 100%;
+  height: 280px;
+}
+.imgDiv > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 7px 10px 0 0;
+}
+.aboutProd {
+  padding: 5px 10px;
+}
+.size {
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(133, 133, 133);
+  justify-content: space-between;
+}
+.aboutProd > h4 {
+  font-size: 14px;
+  word-spacing: 5px;
+  color: rgb(54, 54, 54);
+}
+.addToCartBtn {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  background-color: #ff4949;
+  border: 1px solid red;
+  color: #000000;
+  font-weight: 600;
+}
+.sortingDiv {
+  width: 90%;
+  margin: auto;
+  text-align: right;
+}
+#sortingData {
+  cursor: pointer;
+  border: 2px solid;
+  width: 97%;
+  font-size: 18px;
+  height: 40px;
+  padding-left: 15px;
+  border-radius: 7px;
+}

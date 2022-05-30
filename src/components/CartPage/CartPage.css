@@ -1,0 +1,81 @@
+.cart_div{
+  display: flex;
+  /* border: 1px solid gray; */
+ 
+  margin:30px;
+  gap:39px;
+ font-family:Arial, Helvetica, sans-serif;
+}
+.cart_prod{
+    flex:4;
+    border: 2px solid gray;
+    border-radius: 15px;
+}
+.price_details{
+    flex:2;
+    border: 3px solid rgb(100, 100, 196);
+    height: 300px;
+    padding: 30px;
+    font-family: cursive;
+    color: firebrick;
+    border-radius: 15px;
+}
+.ca_div{
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid gray;
+    gap: 20px;
+    padding: 18px;
+   
+}
+.cart_prod img{
+    width:180px;
+    height: 200px;
+
+}
+.det_div{
+text-align: start;
+line-height: 34px;
+}
+.det_div button{
+    cursor: pointer;
+    background-color: firebrick;
+    border-radius: 6px;
+    padding: 3px;
+    font-size: larger;
+    color: white;
+}
+.price_div{
+    display: flex;
+    margin: 30px;
+    justify-content: space-between;
+}
+.price_total{
+    display: flex;
+    margin: 30px;
+    border-top: 2px dotted gray;
+    padding: 20px;
+    justify-content: space-between;
+}
+.name_div>h2{
+    font-family: cursive;
+    font-weight: 800;
+    width: 200px;
+    margin: auto;
+    color: firebrick;
+    /* margin-top: 100px; */
+   /* border: 1px solid gray; */
+}
+.check_button{
+    background: #1a76d2;
+    color: white;
+    font-weight: 300;
+    /* height: 40px; */
+    border-radius: 8px;
+    padding: 7px;
+    cursor: pointer;
+    margin-left: 80%;
+}
+.name_div{
+    margin-top:-20px ;
+}

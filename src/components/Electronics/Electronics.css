@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clothsContainer {
+  gap: 30px;
+  width: 90%;
+  display: grid;
+  margin: 20px auto;
+  font-family: sans-serif;
+  grid-template-columns: repeat(4, 1fr);
+}
+.cart {
+  width: 100%;
+  height: 100%;
+  line-height: 20px;
+  border-radius: 7px;
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.imgDiv {
+  width: 100%;
+  height: 280px;
+}
+.imgDiv > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 7px 10px 0 0;
+}
+.aboutProd {
+  padding: 5px 10px;
+}
+.size {
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(133, 133, 133);
+  justify-content: space-between;
+}
+.aboutProd > h4 {
+  font-size: 14px;
+  word-spacing: 5px;
+  color: rgb(54, 54, 54);
+}
+.addToCartBtn {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #000000;
+  font-weight: 600;
+  border: 1px solid red;
+  background-color: #ff4949;
+  background-color: transparent;
+}
+.sortingDiv {
+  width: 90%;
+  margin: auto;
+  text-align: right;
+}
+#sortingData {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  border: 2px solid;
+  padding-left: 15px;
+  border-radius: 7px;
+}

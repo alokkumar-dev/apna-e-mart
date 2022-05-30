@@ -1,0 +1,48 @@
+.check_div{
+    display: flex;
+    gap: 50px;
+    margin: 20px;
+}
+#deliveryForm{
+    flex: 6;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    width: 96%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#deliveryForm form input{
+    width: 400px;
+    height: 35px;
+    padding: 10px;
+    background-color: rgba(238, 238, 238, 0.664);
+    border: none;
+    border-bottom: 2px solid grey;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+#deliveryForm h3{
+    margin-top: 30px;
+}
+.price_details{
+ flex: 3;
+}
+#deliveryForm button{
+    width: 300px;
+    border: none;
+    background-color: #1b1b1b;
+    height: 50px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 30px;
+}
+#deliveryForm button:hover{
+    background-color: rgba(0, 0, 0, 0.658);
+}
+form{
+  padding-left: 10%;
+    /* border: 1px solid red; */
+}
