@@ -15,7 +15,7 @@ export const PaymentPage = () => {
 
   const { card, name, m, y, cvv } = payment;
 
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -28,7 +28,7 @@ export const PaymentPage = () => {
       alert("Invalid CVV❌");
     } else {
       alert("YOUR PAYMENT IS SUCCESSFUL😍");
-      history("/");
+      navigate("/orderSuccessful");
     }
   };
 

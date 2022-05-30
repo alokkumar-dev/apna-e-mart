@@ -50,7 +50,7 @@ export const HomePage = () => {
   return (
     <>
       <div className="HomeContainer">
-        <div className="carouselDiv">
+        <div className="carouselHomeDiv">
           <MultipleItems />
         </div>
         <h2 className="catgName">Cloths Products</h2>
