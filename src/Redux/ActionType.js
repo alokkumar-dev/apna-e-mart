@@ -1,0 +1,10 @@
+export const GET_CLOTHS = "GET_CLOTHS";
+export const GET_ELECTRONICS = "GET_ELECTRONICS";
+export const GET_SHOES = "GET_SHOES";
+export const GET_BOOKS = "GET_BOOKS";
+export const GET_DATA = "GET_DATA";
+export const FILTER_CLOTHS = "FILTER_CLOTHS";
+export const FILTER_BOOKS = "FILTER_BOOKS";
+export const FILTER_SHOES = "FILTER_SHOES";
+export const FILTER_ELECTRONICS = "FILTER_ELECTRONICS";
+export const ADD_TO_CART = "ADD_TO_CART";
