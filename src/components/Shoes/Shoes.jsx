@@ -13,7 +13,6 @@ export const Shoes = () => {
   const renderCloths = () => {
     axios.get("https://apna-e-mart.herokuapp.com/shoes").then((res) => {
       dispatch(getShoes(res.data));
-      // console.log(res.data);
     });
   };
   useEffect(() => {
@@ -44,7 +43,12 @@ export const Shoes = () => {
     <>
       <div className="sortFilterDiv">
         <div className="sortingDiv">
-          <select name="" id="filterData" className="sorting" onChange={handleSort}>
+          <select
+            name=""
+            id="filterData"
+            className="sorting"
+            onChange={handleSort}
+          >
             <option value="">Filter by Gender</option>
             <option value="MEN">MALE</option>
             <option value="WOMEN">FEMALE</option>
