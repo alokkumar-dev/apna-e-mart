@@ -10,6 +10,8 @@ import {
 } from "../../Redux/Action";
 import "./Home.css";
 
+import MultipleItems from "../Carousel/Carousel";
+
 export const HomePage = () => {
   const dispatch = useDispatch();
   const { cloths } = useSelector((store) => store.cloths);
@@ -48,11 +50,17 @@ export const HomePage = () => {
   return (
     <>
       <div className="HomeContainer">
+        <div className="carouselDiv">
+          <MultipleItems />
+        </div>
         <h2 className="catgName">Cloths Products</h2>
         <div className="prodsBlock">
           {/* <div className="allProducts"> */}
           {cloths.map((el) => (
-            <Link to={`/cloths/${el._id}`} className="image"  key={el._id}> <img className="image"  src={el.image} alt="" /></Link>
+            <Link to={`/cloths/${el._id}`} className="image" key={el._id}>
+              {" "}
+              <img className="image" src={el.image} alt="" />
+            </Link>
           ))}
           {/* </div> */}
           <button className="viewAllBtn" onClick={() => navigate("/cloths")}>
@@ -62,7 +70,10 @@ export const HomePage = () => {
         <h2 className="catgName">Shoes Products</h2>
         <div className="prodsBlock">
           {shoes.map((el) => (
-            <Link to={`/shoes/${el._id}`} className="image"  key={el._id}> <img className="image"  src={el.image} alt="" /></Link>
+            <Link to={`/shoes/${el._id}`} className="image" key={el._id}>
+              {" "}
+              <img className="image" src={el.image} alt="" />
+            </Link>
           ))}
           <button className="viewAllBtn" onClick={() => navigate("/shoes")}>
             VIEW ALL
@@ -71,7 +82,10 @@ export const HomePage = () => {
         <h2 className="catgName">Electronics Products</h2>
         <div className="prodsBlock">
           {electronics.map((el) => (
-            <Link to={`/electronics/${el._id}`} className="image"  key={el._id}> <img className="image"  src={el.image} alt="" /></Link>
+            <Link to={`/electronics/${el._id}`} className="image" key={el._id}>
+              {" "}
+              <img className="image" src={el.image} alt="" />
+            </Link>
           ))}
           <button
             className="viewAllBtn"
@@ -83,7 +97,10 @@ export const HomePage = () => {
         <h2 className="catgName">Books Products</h2>
         <div className="prodsBlock">
           {books.map((el) => (
-            <Link to={`/books/${el._id}`} className="image"  key={el._id}> <img className="image"  src={el.image} alt="" /></Link>
+            <Link to={`/books/${el._id}`} className="image" key={el._id}>
+              {" "}
+              <img className="image" src={el.image} alt="" />
+            </Link>
           ))}
           <button className="viewAllBtn" onClick={() => navigate("/books")}>
             VIEW ALL
@@ -93,3 +110,4 @@ export const HomePage = () => {
     </>
   );
 };
+
