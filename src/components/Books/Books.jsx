@@ -12,7 +12,6 @@ export const Books = () => {
   const renderCloths = () => {
     axios.get("https://apna-e-mart.herokuapp.com/books").then((res) => {
       dispatch(getBooks(res.data));
-      // console.log(res.data);
     });
   };
   useEffect(() => {
@@ -30,7 +29,6 @@ export const Books = () => {
       dispatch(getBooks(books));
     }
     if (id == "filterData") {
-      // console.log(value);
       dispatch(filterBooks(value));
     }
   };
@@ -83,7 +81,6 @@ export const Books = () => {
                 <h4>{el.description}</h4>
                 <h4>₹ {el.price}</h4>
               </div>
-              {/* <button className="addToCartBtn">Add to cart</button> */}
             </Link>
           ))}
       </div>

@@ -1,81 +1,74 @@
-.cart_div{
+.cart_div {
+  gap: 39px;
+  margin: 30px;
   display: flex;
-  /* border: 1px solid gray; */
- 
-  margin:30px;
-  gap:39px;
- font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.cart_prod{
-    flex:4;
-    border: 2px solid gray;
-    border-radius: 15px;
+.cart_prod {
+  flex: 4;
+  border-radius: 15px;
+  border: 2px solid gray;
 }
-.price_details{
-    flex:2;
-    border: 3px solid rgb(100, 100, 196);
-    height: 300px;
-    padding: 30px;
-    font-family: cursive;
-    color: firebrick;
-    border-radius: 15px;
+.price_details {
+  flex: 2;
+  height: 300px;
+  padding: 30px;
+  color: firebrick;
+  border-radius: 15px;
+  font-family: cursive;
+  border: 3px solid rgb(100, 100, 196);
 }
-.ca_div{
-    display: flex;
-    margin-bottom: 20px;
-    border-bottom: 2px solid gray;
-    gap: 20px;
-    padding: 18px;
-   
+.ca_div {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 2px solid gray;
+  gap: 20px;
+  padding: 18px;
 }
-.cart_prod img{
-    width:180px;
-    height: 200px;
-
+.cart_prod img {
+  width: 180px;
+  height: 200px;
 }
-.det_div{
-text-align: start;
-line-height: 34px;
+.det_div {
+  text-align: start;
+  line-height: 34px;
 }
-.det_div button{
-    cursor: pointer;
-    background-color: firebrick;
-    border-radius: 6px;
-    padding: 3px;
-    font-size: larger;
-    color: white;
+.det_div button {
+  padding: 3px;
+  color: white;
+  cursor: pointer;
+  font-size: larger;
+  border-radius: 6px;
+  background-color: firebrick;
 }
-.price_div{
-    display: flex;
-    margin: 30px;
-    justify-content: space-between;
+.price_div {
+  margin: 30px;
+  display: flex;
+  justify-content: space-between;
 }
-.price_total{
-    display: flex;
-    margin: 30px;
-    border-top: 2px dotted gray;
-    padding: 20px;
-    justify-content: space-between;
+.price_total {
+  margin: 30px;
+  display: flex;
+  padding: 20px;
+  border-top: 2px dotted gray;
+  justify-content: space-between;
 }
-.name_div>h2{
-    font-family: cursive;
-    font-weight: 800;
-    width: 200px;
-    margin: auto;
-    color: firebrick;
-    /* margin-top: 100px; */
-   /* border: 1px solid gray; */
+.name_div > h2 {
+  width: 200px;
+  margin: auto;
+  font-weight: 800;
+  color: firebrick;
+  font-family: cursive;
 }
-.check_button{
-    background: #1a76d2;
-    color: white;
-    font-weight: 300;
-    /* height: 40px; */
-    border-radius: 8px;
-    padding: 7px;
-    cursor: pointer;
-    margin-left: 80%;
+.check_button {
+  padding: 7px;
+  color: white;
+  cursor: pointer;
+  font-weight: 300;
+  margin-left: 80%;
+  border-radius: 8px;
+  background: #1a76d2;
 }
-.name_div{
-    margin-top:-20px ;
+.name_div {
+  margin-top: -20px;
 }

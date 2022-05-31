@@ -5,29 +5,28 @@
 }
 
 .clothsContainer {
-  /* border: 1px solid; */
-  display: grid;
-  width: 90%;
-  margin: 20px auto;
-  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
+  width: 90%;
+  display: grid;
+  margin: 20px auto;
   font-family: sans-serif;
+  grid-template-columns: repeat(4, 1fr);
 }
 .cart {
   width: 100%;
   height: 100%;
-  background-color: #fff;
-  border-radius: 7px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   line-height: 20px;
+  border-radius: 7px;
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .imgDiv {
   width: 100%;
   height: 280px;
 }
 .imgDiv > img {
-  height: 100%;
   width: 100%;
+  height: 100%;
   border-radius: 7px 10px 0 0;
 }
 .aboutProd {
@@ -47,14 +46,14 @@
 }
 .addToCartBtn {
   width: 100%;
-  font-size: 20px;
   padding: 10px;
+  font-size: 20px;
   cursor: pointer;
-  background-color: transparent;
-  background-color: #ff4949;
-  border: 1px solid red;
   color: #000000;
   font-weight: 600;
+  border: 1px solid red;
+  background-color: #ff4949;
+  background-color: transparent;
 }
 .sortingDiv {
   width: 90%;
@@ -62,11 +61,11 @@
   text-align: right;
 }
 #sortingData {
-  cursor: pointer;
-  border: 2px solid;
   width: 97%;
-  font-size: 18px;
   height: 40px;
+  cursor: pointer;
+  font-size: 18px;
+  border: 2px solid;
   padding-left: 15px;
   border-radius: 7px;
 }

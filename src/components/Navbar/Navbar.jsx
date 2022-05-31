@@ -26,17 +26,16 @@ export const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
-  const [cartData, setCartData] =React.useState(0);
-  const cart = useSelector((store)=>store.cart);
-  const getCartData = ()=>{
-    axios.get("https://apna-e-mart.herokuapp.com/cart").then((res)=>{
+  const [cartData, setCartData] = React.useState(0);
+  const { cart } = useSelector((store) => store.cart);
+  const getCartData = () => {
+    axios.get("https://apna-e-mart.herokuapp.com/cart").then((res) => {
       setCartData(res.data.length);
-    })
-  }
-  React.useEffect(()=>{
+    });
+  };
+  React.useEffect(() => {
     getCartData();
-  }, [cart])
-  console.log(cart)
+  }, [cart]);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -151,7 +150,7 @@ export const ResponsiveAppBar = () => {
             ))}
           </Box>
           <IconButton
-          onClick={()=>navigate("/cart")}
+            onClick={() => navigate("/cart")}
             aria-label="cart"
             style={{ marginRight: "35px", color: "white" }}
           >

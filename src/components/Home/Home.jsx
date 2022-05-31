@@ -46,7 +46,6 @@ export const HomePage = () => {
     renderElectronics();
     renderBooks();
   }, []);
-  console.log(cloths);
   return (
     <>
       <div className="HomeContainer">
@@ -55,14 +54,12 @@ export const HomePage = () => {
         </div>
         <h2 className="catgName">Cloths Products</h2>
         <div className="prodsBlock">
-          {/* <div className="allProducts"> */}
           {cloths.map((el) => (
             <Link to={`/cloths/${el._id}`} className="image" key={el._id}>
               {" "}
               <img className="image" src={el.image} alt="" />
             </Link>
           ))}
-          {/* </div> */}
           <button className="viewAllBtn" onClick={() => navigate("/cloths")}>
             VIEW ALL
           </button>
@@ -110,4 +107,3 @@ export const HomePage = () => {
     </>
   );
 };
-

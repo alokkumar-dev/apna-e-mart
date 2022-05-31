@@ -14,7 +14,6 @@ export const Electronics = () => {
   const renderCloths = () => {
     axios.get("https://apna-e-mart.herokuapp.com/electronics").then((res) => {
       dispatch(getElectronics(res.data));
-      // console.log(res.data);
     });
   };
   useEffect(() => {
@@ -84,7 +83,6 @@ export const Electronics = () => {
                 <h4>{el.description}</h4>
                 <h4>₹ {el.price}</h4>
               </div>
-              {/* <button className="addToCartBtn">Add to cart</button> */}
             </Link>
           ))}
       </div>

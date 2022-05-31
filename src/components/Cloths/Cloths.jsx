@@ -13,14 +13,11 @@ export const Cloths = () => {
   const renderCloths = () => {
     axios.get("https://apna-e-mart.herokuapp.com/cloths").then((res) => {
       dispatch(getCloths(res.data));
-      // console.log(res.data);
     });
-    
   };
   useEffect(() => {
     renderCloths();
   }, []);
-  //   console.log(cloths);
   const handleSort = (e) => {
     const { id, value } = e.target;
 
@@ -89,7 +86,6 @@ export const Cloths = () => {
                 <h4>{el.description}</h4>
                 <h4>₹ {el.price}</h4>
               </div>
-              {/* <button className="addToCartBtn">Add to cart</button> */}
             </Link>
           ))}
       </div>

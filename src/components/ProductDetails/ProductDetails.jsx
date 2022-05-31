@@ -2,10 +2,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { addToCart, getData } from "../../Redux/Action";
+import { cartData, getData } from "../../Redux/Action";
 import "./ProductDetails.css";
 export const ProductDetails = () => {
-
   const dispatch = useDispatch();
   const { data } = useSelector((store) => store.data);
   // const {cart} = useSelector((store)=>store.cart);
@@ -23,12 +22,12 @@ export const ProductDetails = () => {
   useEffect(() => {
     getProduct();
   }, []);
-  const handleCart = ()=>{
-    axios.post(`https://apna-e-mart.herokuapp.com/cart`,prod).then(()=>{
+  const handleCart = () => {
+    axios.post(`https://apna-e-mart.herokuapp.com/cart`, prod).then(() => {
       alert("Product add successfully");
     });
-    dispatch(addToCart());
-  }
+    dispatch(cartData());
+  };
   return (
     <>
       <div className="viewProd_container">
@@ -102,7 +101,9 @@ export const ProductDetails = () => {
             </div>
           </div>
           <div id="btnDiv">
-            <button id="addtoCart" onClick={handleCart}>ADD TO CART</button>
+            <button id="addtoCart" onClick={handleCart}>
+              ADD TO CART
+            </button>
           </div>
         </div>
       </div>
