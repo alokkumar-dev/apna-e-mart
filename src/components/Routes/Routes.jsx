@@ -10,6 +10,8 @@ import { Electronics } from "../Electronics/Electronics";
 import { PaymentPage } from "../PaymentPage/PaymentPage";
 import { ProductDetails } from "../ProductDetails/ProductDetails";
 import { PaymentSuccessFull } from "../PaymentSuccessfull/PaymentSuccessfull";
+import SignUp from "../SignUp/SignUp";
+import LogIn from "../Login/Login";
 
 export const AllRoutes = () => {
   return (
@@ -20,6 +22,8 @@ export const AllRoutes = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/Books" element={<Books />} />
         <Route path="/Shoes" element={<Shoes />} />
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/Cloths" element={<Cloths />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/payment" element={<PaymentPage />} />

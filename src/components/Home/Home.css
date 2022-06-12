@@ -7,13 +7,13 @@
   font-family: sans-serif;
 }
 .prodsBlock {
-  display: flex;
-  height: 200px;
-  width: 90%;
   gap: 2%;
+  width: 90%;
+  display: grid;
   margin: 15px auto;
   position: relative;
-  /* border: 1px solid; */
+  grid-template-rows: 180px;
+  grid-template-columns: repeat(5, 1fr);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
@@ -22,8 +22,10 @@
   height: 100%;
   padding: 10px;
   cursor: pointer;
+  object-fit: contain;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+
 .image:hover {
   padding: 0;
   transition: all ease 0.5s;
