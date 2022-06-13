@@ -36,7 +36,7 @@ export default function Register() {
     // register flow complete, connect redux store remaining
 
     axios
-      .post("https://apna-e-mart.herokuapp.com/register", userDetails)
+      .post("https://apna-mart-data.herokuapp.com/register", userDetails)
       .then((res) => {
         console.log(res.data);
         alert("Register Successful");
