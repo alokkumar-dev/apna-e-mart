@@ -11,7 +11,7 @@ export const Cloths = () => {
 
   const navigate = useNavigate();
   const renderCloths = () => {
-    axios.get("https://apna-e-mart.herokuapp.com/cloths").then((res) => {
+    axios.get("https://apna-mart-data.herokuapp.com/cloths").then((res) => {
       dispatch(getCloths(res.data));
     });
   };

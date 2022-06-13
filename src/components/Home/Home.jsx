@@ -21,22 +21,22 @@ export const HomePage = () => {
 
   const navigate = useNavigate();
   const renderCloths = () => {
-    axios.get("https://apna-e-mart.herokuapp.com/cloths").then((res) => {
+    axios.get("https://apna-mart-data.herokuapp.com/cloths").then((res) => {
       dispatch(getCloths(res.data.slice(0, 5)));
     });
   };
   const renderShoes = () => {
-    axios.get("https://apna-e-mart.herokuapp.com/shoes").then((res) => {
+    axios.get("https://apna-mart-data.herokuapp.com/shoes").then((res) => {
       dispatch(getShoes(res.data.slice(0, 5)));
     });
   };
   const renderElectronics = () => {
-    axios.get("https://apna-e-mart.herokuapp.com/electronics").then((res) => {
+    axios.get("https://apna-mart-data.herokuapp.com/electronics").then((res) => {
       dispatch(getElectronics(res.data.slice(0, 5)));
     });
   };
   const renderBooks = () => {
-    axios.get("https://apna-e-mart.herokuapp.com/books").then((res) => {
+    axios.get("https://apna-mart-data.herokuapp.com/books").then((res) => {
       dispatch(getBooks(res.data.slice(0, 5)));
     });
   };

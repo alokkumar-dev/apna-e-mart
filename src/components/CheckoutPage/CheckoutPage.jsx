@@ -11,7 +11,7 @@ export const Checkout = () => {
   const showData = () => {
     let sum = 0;
     // console.log("delete")
-    axios.get("https://apna-e-mart.herokuapp.com/cart").then((res) => {
+    axios.get("https://apna-mart-data.herokuapp.com/cart").then((res) => {
       // setData([...res.data])
       // console.log(res.data)
       if (res.data.length > 0) {

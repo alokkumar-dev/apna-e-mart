@@ -13,7 +13,7 @@ export const Cart = () => {
 
   const showData = () => {
     let sum = 0;
-    axios.get("https://apna-e-mart.herokuapp.com/cart").then((res) => {
+    axios.get("https://apna-mart-data.herokuapp.com/cart").then((res) => {
       setData([...res.data]);
       if (res.data.length > 0) {
         for (let i = 0; i < res.data.length; i++) {
@@ -31,7 +31,7 @@ export const Cart = () => {
   }, []);
   let handleDelete = (e) => {
     axios
-      .delete(`https://apna-e-mart.herokuapp.com/cart/${e}`)
+      .delete(`https://apna-mart-data.herokuapp.com/cart/${e}`)
       .then()
       .then(() => {
         showData();
