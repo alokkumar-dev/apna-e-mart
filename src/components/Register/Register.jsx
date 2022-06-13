@@ -1,14 +1,8 @@
 import * as React from "react";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -34,7 +28,6 @@ export default function Register() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(userDetails);
-    // register flow complete, connect redux store remaining
 
     axios
       .post("https://apna-mart-data.herokuapp.com/register", userDetails)
@@ -42,7 +35,7 @@ export default function Register() {
         console.log(res.data);
         alert("Register Successful");
         setUserDetails({
-          name:"",
+          name: "",
           email: "",
           phone: "",
           password: "",
@@ -58,15 +51,6 @@ export default function Register() {
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs" sx={{ mt: 10 }}>
-        {/* <Typography
-          component="h1"
-          variant="h5"
-          textAlign={"center"}
-          color={"#049fe2"}
-          fontWeight={"600"}
-        >
-          APNA E MART
-        </Typography> */}
         <CssBaseline />
         <Box
           sx={{
@@ -76,11 +60,8 @@ export default function Register() {
             alignItems: "center",
           }}
         >
-          {/* <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
-          </Avatar> */}
           <Typography component="h1" variant="h4">
-           Registration
+            Registration
           </Typography>
           <Box
             component="form"

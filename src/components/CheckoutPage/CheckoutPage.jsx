@@ -9,16 +9,11 @@ export const Checkout = () => {
   const  isLogin  = useSelector((store) => store.isLogin);
   const showData = () => {
     let sum = 0;
-    // console.log("delete")
     axios.get("https://apna-mart-data.herokuapp.com/cart").then((res) => {
-      // setData([...res.data])
-      // console.log(res.data)
       if (res.data.length > 0) {
         for (let i = 0; i < res.data.length; i++) {
-          // console.log(data[i].price)
           let x = res.data[i].price.split(",").join("");
           sum += +x;
-          // console.log(sum)
           setPrice(sum);
         }
       } else {
@@ -28,7 +23,6 @@ export const Checkout = () => {
   };
   useEffect(() => {
     showData();
-    //console.log(showData())
   }, []);
   const nextPage = (e) => {
     e.preventDefault();
