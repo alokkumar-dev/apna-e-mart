@@ -57,7 +57,7 @@ export const addToCart = (payload) => ({
 });
 
 export const cartData = () => (dispatch) => {
-  axios.get("https://apna-e-mart.herokuapp.com/cart").then((res) => {
+  axios.get("https://apna-mart-data.herokuapp.com/cart").then((res) => {
     dispatch(addToCart(res.data));
   });
 };

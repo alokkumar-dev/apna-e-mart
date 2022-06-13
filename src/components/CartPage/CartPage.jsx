@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { cartData } from "../../Redux/Action";
 import "./CartPage.css";
 export const Cart = () => {
-  // const {cart} =useSelector((store)=>store.cart)
   const [data, setData] = useState([]);
   const [price, setPrice] = useState(0);
   const dispatch = useDispatch();

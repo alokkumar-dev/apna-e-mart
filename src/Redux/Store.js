@@ -1,5 +1,6 @@
 import { applyMiddleware, combineReducers, legacy_createStore } from "redux";
 import thunk from "redux-thunk";
+import { loginReducer } from "./Login/LoginReducer";
 import { Reducer } from "./Reducer";
 
 const reducer = combineReducers({
@@ -9,6 +10,7 @@ const reducer = combineReducers({
   books: Reducer,
   data: Reducer,
   cart: Reducer,
+  isLogin:loginReducer
 });
 
 export const store = legacy_createStore(reducer, applyMiddleware(thunk));

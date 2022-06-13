@@ -18,6 +18,7 @@ const theme = createTheme();
 
 export default function Register() {
   const [userDetails, setUserDetails] = React.useState({
+    name: "",
     email: "",
     phone: "",
     password: "",
@@ -41,6 +42,7 @@ export default function Register() {
         console.log(res.data);
         alert("Register Successful");
         setUserDetails({
+          name:"",
           email: "",
           phone: "",
           password: "",
@@ -56,7 +58,7 @@ export default function Register() {
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs" sx={{ mt: 10 }}>
-        <Typography
+        {/* <Typography
           component="h1"
           variant="h5"
           textAlign={"center"}
@@ -64,7 +66,7 @@ export default function Register() {
           fontWeight={"600"}
         >
           APNA E MART
-        </Typography>
+        </Typography> */}
         <CssBaseline />
         <Box
           sx={{
@@ -86,6 +88,21 @@ export default function Register() {
             noValidate
             sx={{ mt: 1 }}
           >
+            <Typography component="h1" variant="h6">
+              Name
+            </Typography>
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              name="name"
+              //   label="name"
+              placeholder="enter your namer"
+              type="text"
+              id="name"
+              autoComplete="name"
+              onChange={handleChange}
+            />
             <Typography component="h1" variant="h6">
               Email id
             </Typography>

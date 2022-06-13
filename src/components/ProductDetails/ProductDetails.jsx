@@ -13,7 +13,7 @@ export const ProductDetails = () => {
   const { id, category } = useParams();
   const getProduct = () => {
     axios
-      .get(`https://apna-e-mart.herokuapp.com/${category}/${id}`)
+      .get(`https://apna-mart-data.herokuapp.com/${category}/${id}`)
       .then((res) => {
         setProd(res.data);
         dispatch(getData(res.data));
@@ -23,7 +23,7 @@ export const ProductDetails = () => {
     getProduct();
   }, []);
   const handleCart = () => {
-    axios.post(`https://apna-e-mart.herokuapp.com/cart`, prod).then(() => {
+    axios.post(`https://apna-mart-data.herokuapp.com/cart`, prod).then(() => {
       alert("Product add successfully");
     });
     dispatch(cartData());

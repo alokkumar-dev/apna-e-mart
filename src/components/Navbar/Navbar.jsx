@@ -16,20 +16,23 @@ import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import Badge from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
+import { Logout } from "../Logout/Logout";
 const pages = ["Cloths", "Electronics", "Shoes", "Books"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+// const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 export const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
+  const isLogin = useSelector((store) => store.isLogin);
+  console.log("welcome Name : ", isLogin);
   const [cartData, setCartData] = React.useState(0);
   const { cart } = useSelector((store) => store.cart);
   const getCartData = () => {
-    axios.get("https://apna-e-mart.herokuapp.com/cart").then((res) => {
+    axios.get("https://apna-mart-data.herokuapp.com/cart").then((res) => {
       setCartData(res.data.length);
     });
   };
@@ -158,7 +161,43 @@ export const ResponsiveAppBar = () => {
               <ShoppingCartIcon />
             </StyledBadge>
           </IconButton>
-          <Box sx={{ flexGrow: 0 }}>
+          <p
+            style={{ color: "white", marginLeft: "20px", marginRight: "25px" }}
+          >
+            |
+          </p>
+          {isLogin.data ? (
+            <Logout name={isLogin.data.user.name} />
+          ) : (
+            <>
+              <Link
+                to="/login"
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                  fontSize: "14px",
+                  marginRight: "15px",
+                }}
+              >
+                Login
+              </Link>
+              <Link
+                to="/register"
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  backgroundColor: "#fed250",
+                  padding: "10px",
+                  fontSize: "14px",
+                  borderRadius: "5px",
+                }}
+              >
+                Sign up
+              </Link>
+            </>
+          )}
+
+          {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="" />
@@ -186,7 +225,7 @@ export const ResponsiveAppBar = () => {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>

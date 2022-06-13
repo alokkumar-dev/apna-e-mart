@@ -2,12 +2,11 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-// import { Login } from "../login/login"
 import "./CheckoutPage.css";
 export const Checkout = () => {
   const [price, setPrice] = useState(0);
   const navigate = useNavigate();
-  // const  isLogin  = useSelector((store) => store.isLogin);
+  const  isLogin  = useSelector((store) => store.isLogin);
   const showData = () => {
     let sum = 0;
     // console.log("delete")
@@ -37,7 +36,7 @@ export const Checkout = () => {
   };
   return (
     <>
-      {/* {isLogin.data ? (<> */}
+      {isLogin.data ? (<>
       <h1 style={{ margin: "30px" }}>CHECKOUT</h1>
       <div className="check_div">
         <div id="deliveryForm">
@@ -165,11 +164,11 @@ export const Checkout = () => {
           </div>
         </div>
       </div>
-      {/* </>
+      </>
          )
         :( 
          navigate("/login"))
-      } */}
+      }
     </>
   );
 };
