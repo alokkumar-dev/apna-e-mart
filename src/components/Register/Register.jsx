@@ -16,7 +16,7 @@ import axios from "axios";
 
 const theme = createTheme();
 
-export default function SignUp() {
+export default function Register() {
   const [userDetails, setUserDetails] = React.useState({
     email: "",
     phone: "",
@@ -36,7 +36,7 @@ export default function SignUp() {
     // register flow complete, connect redux store remaining
 
     axios
-      .post("http://localhost:3001/register", userDetails)
+      .post("https://apna-e-mart.herokuapp.com/register", userDetails)
       .then((res) => {
         console.log(res.data);
         alert("Register Successful");
@@ -49,7 +49,7 @@ export default function SignUp() {
       })
       .catch((err) => {
         console.log(err);
-        alert("Register Failed");
+        alert("Registeration Failed");
       });
   };
 
@@ -78,7 +78,7 @@ export default function SignUp() {
             <LockOutlinedIcon />
           </Avatar> */}
           <Typography component="h1" variant="h4">
-            Sign in
+           Registration
           </Typography>
           <Box
             component="form"

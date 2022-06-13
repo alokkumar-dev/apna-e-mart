@@ -37,7 +37,7 @@ export default function LogIn() {
     // login flow complete, connect redux, isAuth and token store remaining
 
     axios
-      .post("http://localhost:3001/login", userDetails)
+      .post("https://apna-e-mart.herokuapp.com/login", userDetails)
       .then((res) => {
         console.log(res.data);
         alert("Login Successful");
