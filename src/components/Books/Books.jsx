@@ -10,7 +10,7 @@ export const Books = () => {
   const filterBook = useSelector((store) => store.books.filterBooks);
   const navigate = useNavigate();
   const renderCloths = () => {
-    axios.get("https://apna-mart-data.herokuapp.com/books").then((res) => {
+    axios.get("https://hilarious-erin-shoulder-pads.cyclic.app/books").then((res) => {
       dispatch(getBooks(res.data));
     });
   };

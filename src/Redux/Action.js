@@ -57,7 +57,7 @@ export const addToCart = (payload) => ({
 });
 
 export const cartData = () => (dispatch) => {
-  axios.get("https://apna-mart-data.herokuapp.com/cart").then((res) => {
+  axios.get("https://hilarious-erin-shoulder-pads.cyclic.app/cart").then((res) => {
     dispatch(addToCart(res.data));
   });
 };

@@ -11,7 +11,7 @@ export const Shoes = () => {
   const filterShoe = useSelector((store) => store.shoes.filterShoes);
 
   const renderCloths = () => {
-    axios.get("https://apna-mart-data.herokuapp.com/shoes").then((res) => {
+    axios.get("https://hilarious-erin-shoulder-pads.cyclic.app/appliances").then((res) => {
       dispatch(getShoes(res.data));
     });
   };

@@ -12,7 +12,7 @@ export const Electronics = () => {
     (store) => store.electronics.filterElectronics
   );
   const renderCloths = () => {
-    axios.get("https://apna-mart-data.herokuapp.com/electronics").then((res) => {
+    axios.get("https://hilarious-erin-shoulder-pads.cyclic.app/electronics").then((res) => {
       dispatch(getElectronics(res.data));
     });
   };
